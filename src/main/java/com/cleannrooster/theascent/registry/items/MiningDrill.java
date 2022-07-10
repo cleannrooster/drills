@@ -51,12 +51,11 @@ public class MiningDrill
     }
 
     public boolean canMine(BlockState state, World world, BlockPos pos, PlayerEntity miner) {
-        return true;
+        return false;
     }
     public boolean postMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner) {
-        /*if ((double)state.getHardness(world, pos) != 0.0) {
-            stack.damage(1, miner, e -> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
-        }*/
+            //stack.damage(1, miner, e -> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
+
         return true;
     }
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
@@ -72,9 +71,9 @@ public class MiningDrill
         int i = MathHelper.roundDownToMultiple(box.minX+(0.75*g)-0.5, 1);
         int j = MathHelper.roundDownToMultiple(0.5+box.minY+(0.75*h),1);
         int k = MathHelper.roundDownToMultiple(box.minZ+(0.75*r)-0.5,1);
-        int l = MathHelper.roundUpToMultiple((int) (box.maxX+(0.75*g)+0.5),1);
+        int l = MathHelper.roundUpToMultiple((int) (box.maxX+(0.75*g)),1);
         int m = MathHelper.roundUpToMultiple((int) (box.maxY+(0.75*h)),1);
-        int n = MathHelper.roundUpToMultiple((int) (box.maxZ+(0.75*r)-0.5),1);
+        int n = MathHelper.roundUpToMultiple((int) (box.maxZ+(0.75*r)),1);
         Random rand = new Random();
         boolean bl = false;
         boolean bl2 = false;

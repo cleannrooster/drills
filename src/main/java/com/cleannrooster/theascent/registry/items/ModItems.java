@@ -36,8 +36,8 @@ public class ModItems {
     public static giga gigadrill = new giga(new Item.Settings().maxDamage(3000).group(ItemGroup.TOOLS));
     public static miner miningdrill = new miner(new Item.Settings().maxDamage(3000).group(ItemGroup.TOOLS));
     public static fighter fighterdrill = new fighter(new Item.Settings().maxDamage(3000).group(ItemGroup.TOOLS));
-    public static powered powereddrills = new powered(new Item.Settings().maxDamage(200).group(ItemGroup.TOOLS));
-    public static left left = new left(new Item.Settings().maxDamage(200).group(ItemGroup.TOOLS));
+    public static powered powereddrills = new powered(new Item.Settings().maxCount(1).group(ItemGroup.TOOLS));
+    public static left left = new left(new Item.Settings().maxCount(1).group(ItemGroup.TOOLS));
 
 
 
